@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp1.EllipseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Ellipse" Height="600" Width="663">
+    <Grid Margin="6,-39,60,50">
+        <Label Content="Radius" FontSize="20" HorizontalAlignment="Left" Height="78" Margin="17,60,0,0" VerticalAlignment="Top" Width="170"/>
+        <Label Content="Thickness" FontSize="20" HorizontalAlignment="Left" Height="64" Margin="20,150,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.172,0.361"/>
+        <Label Content="Color" FontSize="20" HorizontalAlignment="Left" Height="71" Margin="16,242,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="174,549,0,-27" Width="289" Click="Button_Click"/>
+        <ListBox x:Name="RadiusList" HorizontalAlignment="Left" Height="67" Margin="180,48,0,0" VerticalAlignment="Top" Width="342" ItemsSource="{Binding Path=boje}"/>
+        <ListBox x:Name="ThicknessList" HorizontalAlignment="Left" Height="67" Margin="181,143,0,0" VerticalAlignment="Top" Width="339" ItemsSource="{Binding Path=precnici}"/>
+        <ListBox x:Name="ColorList" HorizontalAlignment="Left" Height="70" Margin="182,231,0,0" VerticalAlignment="Top" Width="338" ItemsSource="{Binding Path=debljina}"/>
+        <CheckBox x:Name="AddText" Content="Add Text" HorizontalAlignment="Left" Margin="32,317,0,0" VerticalAlignment="Top" Checked="AddText_Checked" Height="33" Width="71"/>
+        <TextBox x:Name="Text"  HorizontalAlignment="Left" Height="113" Margin="177,335,0,0" TextWrapping="Wrap" Text="Input text" VerticalAlignment="Top" Width="332" Visibility="Hidden"/>
+        <ListBox Name="ColorList2" HorizontalAlignment="Left" Height="46" Margin="178,465,0,0" VerticalAlignment="Top" Width="331" ItemsSource="{Binding Path=boje}" Visibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.PolygonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Polygon" Height="652" Width="549">
+    <Grid HorizontalAlignment="Left" Width="728">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Thickness" HorizontalAlignment="Left" FontSize="20" Height="58" Margin="17,48,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label Content="Color" HorizontalAlignment="Left" FontSize="20"  Height="52" Margin="18,161,0,0" VerticalAlignment="Top" Width="137"/>
+        <Button Content="Submit" HorizontalAlignment="Left" FontSize="20" Height="58" Margin="163,513,0,0" VerticalAlignment="Top" Width="190" Click="Button_Click"/>
+        <ListBox Name="ColorList" HorizontalAlignment="Left" Height="112" Margin="137,167,0,0" VerticalAlignment="Top" Width="361" ItemsSource="{Binding Path=boje}"/>
+        <ListBox Name="ThicknessList" HorizontalAlignment="Left" Height="107" Margin="134,36,0,0" VerticalAlignment="Top" Width="364" ItemsSource="{Binding Path=debljina}"/>
+        <CheckBox Name="TextCheck" Content="Add text" HorizontalAlignment="Left" Height="29" Margin="25,270,0,0" VerticalAlignment="Top" Width="84" Checked="TextCheck_Checked"/>
+        <TextBox Name="TextBox" HorizontalAlignment="Left" Height="103" Margin="158,327,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="283" Visibility="Hidden"/>
+        <ListBox Name="ColorList2" HorizontalAlignment="Left" Height="52" Margin="161,442,0,0" VerticalAlignment="Top" Width="285" ItemsSource="{Binding Path=boje}" Visibility="Hidden"/>
+    </Grid>
+</Window>
